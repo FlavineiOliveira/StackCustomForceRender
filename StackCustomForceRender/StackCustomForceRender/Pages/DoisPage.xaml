@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StackCustomForceRender.Pages.DoisPage"
+             xmlns:local="clr-namespace:StackCustomForceRender.Controls">
+    <ContentPage.Content>
+
+        <ListView Header="{Binding TextoHeader}" ItemsSource="{Binding Pessoas}">
+            <ListView.HeaderTemplate>
+                
+                <DataTemplate>
+
+                    <StackLayout>
+                        <Label Text="Tela com listview" />
+
+                        <Label Text="{Binding .}" />
+                    </StackLayout>
+
+                </DataTemplate>
+                
+            </ListView.HeaderTemplate>
+            <ListView.ItemTemplate>
+                
+                <DataTemplate>
+                    
+                    <ViewCell>
+                        <StackLayout>
+
+                            <StackLayout Orientation="Horizontal">
+
+                                <Label Text="{Binding Contador}" />
+                                <Label Text="{Binding Nome}" />
+
+                            </StackLayout>
+
+                            <ScrollView Orientation="Horizontal">
+                            
+                            <local:StackCustomizado x:Name="listaItens"
+                                                    Orientation="Horizontal"
+                                                    DefinirLayoutCommand="{Binding DefinirLayoutCommand}"
+                                                    AdicionarItemNaListaCommand="{Binding AdicionarItemCommand}"
+                                                    ItensStack="{Binding Documentos}" />
+                        </ScrollView>
+
+
+                        </StackLayout>
+                    </ViewCell>
+                   
+                </DataTemplate>
+                
+            </ListView.ItemTemplate>
+            <ListView.Footer>
+
+                <!--<DataTemplate>-->
+                    
+                        <StackLayout>
+
+                            <Button Text="VOLTAR"
+                                    Command="{Binding VoltarCommand}"/>
+
+                        </StackLayout>
+                    
+                <!--</DataTemplate>-->
+                
+            </ListView.Footer>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>
