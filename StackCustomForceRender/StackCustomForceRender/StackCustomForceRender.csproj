@@ -14,13 +14,19 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Pages\TresPage.xaml.cs">
+      <DependentUpon>TresPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
     <EmbeddedResource Update="Controls\StackCustomizado.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Pages\DoisPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Pages\TresPagexaml.xaml">
+    <EmbeddedResource Update="Pages\TresPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Pages\UmPage.xaml">

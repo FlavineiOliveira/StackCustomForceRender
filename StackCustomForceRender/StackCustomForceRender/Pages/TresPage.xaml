@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StackCustomForceRender.Pages.TresPage">
+    <ContentPage.Content>
+        <ListView ItemsSource="{Binding Nomes}" HasUnevenRows="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        
+                        <StackLayout Orientation="Horizontal"
+                                     BackgroundColor="Red">
+
+                            <Frame>
+                                <Image Source="test.png" />
+                            </Frame>
+
+                            <ScrollView BackgroundColor="Azure"
+                                        Orientation="Horizontal"
+                                        HorizontalOptions="FillAndExpand">
+
+                                <StackLayout Orientation="Horizontal">
+
+                                    <Frame>
+                                        <Image Source="test.png" />
+                                    </Frame>
+
+                                    <Label Text="{Binding .}" />
+                                    
+                                </StackLayout>
+                               
+                            </ScrollView>
+                            
+                        </StackLayout>
+                        
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>

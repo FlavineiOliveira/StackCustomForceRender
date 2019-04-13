@@ -21,7 +21,8 @@ namespace StackCustomForceRender.ViewModels
 
         private async void ProximaTela()
         {
-            await Navigation.PushAsync(new DoisPage());
+            //await Navigation.PushAsync(new DoisPage());
+            await Navigation.PushAsync(new TresPage());
         }
     }
 }
